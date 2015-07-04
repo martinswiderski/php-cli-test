@@ -1,0 +1,33 @@
+{
+    "name": "codebloke/php-cli-test",
+    "type": "library",
+    "description": "PHP >= 5.4 Command-line code testing tool",
+    "keywords": [
+        "sdk",
+        "php cli",
+        "php shell",
+        "command line",
+        "commandline"
+    ],
+    "homepage": "https://bitbucket.org/codebloke/php-cli-test",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Martin Swiderski",
+            "email": "codebloke@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-0" : {
+            "PhpCliTest\\" : "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1"
+        }
+    }
+}
