@@ -1,15 +1,19 @@
 {
-    "name": "codebloke/php-cli-test",
+    "name": "martinswiderski/php-cli-test",
     "type": "library",
     "description": "PHP >= 5.4 Command-line code testing tool",
     "keywords": [
         "sdk",
         "php cli",
+        "testing",
+        "unit tests",
+        "unit test",
+        "TDD",
         "php shell",
         "command line",
         "commandline"
     ],
-    "homepage": "https://bitbucket.org/codebloke/php-cli-test",
+    "homepage": "https://github.com/martinswiderski/php-cli-test.git",
     "license": "GPL",
     "authors": [
         {
