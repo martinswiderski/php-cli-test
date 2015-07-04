@@ -22,37 +22,37 @@ PHP version 5.5
  * **License:** http://opensource.org/licenses/MIT MIT
  * **Link:** https://codebloke.wordpress.com/mit-license/
 
-## `private $_init = true`
+### `private $_init = true`
 
 Makes object immutable
 
 
-## `private $_error = false`
+### `private $_error = false`
 
 Error
 
 
-## `private $_result = false`
+### `private $_result = false`
 
 Assertion result
 
 
-## `private $_comment = ''`
+### `private $_comment = ''`
 
 Comment
 
 
-## `private $_invoker = ''`
+### `private $_invoker = ''`
 
 File calling the assertion
 
 
-## `private $_line = 0`
+### `private $_line = 0`
 
 Line in the file calling assertion
 
 
-## `public function setResult($result, $comment)`
+### `public function setResult($result, $comment)`
 
 Sets results
 
@@ -61,56 +61,56 @@ Sets results
    * `string` — $comment Comment text
  * **Returns:** \PhpCliTest\Result
 
-## `public function detectInvoker()`
+### `public function detectInvoker()`
 
 Detects invoker
 
  * **Returns:** void
 
-## `public function __toString()`
+### `public function __toString()`
 
 Outputs object as formatted string
 
  * **Returns:** string
 
-## `public function asArray()`
+### `public function asArray()`
 
 Returns result object as array
 
  * **Returns:** array
 
-## `public function getLine()`
+### `public function getLine()`
 
 Line number
 
  * **Returns:** int
 
-## `public function getError()`
+### `public function getError()`
 
 Gets error
 
  * **Returns:** bool|string
 
-## `public function setError($message)`
+### `public function setError($message)`
 
 Sets error
 
  * **Parameters:** `string` — $message Error message
  * **Returns:** \PhpCliTest\Result
 
-## `public function getFile()`
+### `public function getFile()`
 
 Invoker, filename
 
  * **Returns:** string
 
-## `public function getComment()`
+### `public function getComment()`
 
 Comment
 
  * **Returns:** string
 
-## `public function getResult()`
+### `public function getResult()`
 
 Result
 
@@ -127,66 +127,66 @@ PHP version 5.5
  * **License:** http://opensource.org/licenses/MIT MIT
  * **Link:** https://codebloke.wordpress.com/mit-license/
 
-## `public $tests = array()`
+### `public $tests = array()`
 
 Collection of tests executed
 
 
-## `public $exit_code = 0`
+### `public $exit_code = 0`
 
 Command line exit code
 
 
-## `public $break_at_first_failed = false`
+### `public $break_at_first_failed = false`
 
 If TRUE first failure would break the test
 
 
-## `private static $_self = null`
+### `private static $_self = null`
 
 Store for Singleton
 
 
-## `private function __construct()`
+### `private function __construct()`
 
 Constructor
 
  * **Returns:** \PhpCliTest\Runner
 
-## `public function breakAtFailed($flag=null)`
+### `public function breakAtFailed($flag=null)`
 
 Hybrid getter/setter if set to TRUE breaks at first assertion broken, otherwise it would evaluate all assertions and send non-0 exit code at the end in case of failure
 
  * **Parameters:** `null|bool` — $flag If TRUE it would break on failure
  * **Returns:** bool
 
-## `public function exitCode($code=null)`
+### `public function exitCode($code=null)`
 
 Hybrid setter/getter for exit code
 
  * **Parameters:** `null|int` — $code Exit code, 0 or > 0
  * **Returns:** int
 
-## `public function addTest(\PhpCliTest\Result $result)`
+### `public function addTest(\PhpCliTest\Result $result)`
 
 Adds assertion result
 
  * **Parameters:** `\PhpCliTest\Result` — $result Result object
  * **Returns:** void
 
-## `public static function getInstance()`
+### `public static function getInstance()`
 
 Singleton getter
 
  * **Returns:** \PhpCliTest\Runner
 
-## `public function present()`
+### `public function present()`
 
 Returns all registered tests and their results as string
 
  * **Returns:** string
 
-## `public function toJson()`
+### `public function toJson()`
 
 Returns results as JSON string
 
@@ -203,7 +203,7 @@ Returns results as JSON string
   * **License:** http://opensource.org/licenses/MIT MIT
   * **Link:** https://codebloke.wordpress.com/mit-license/
 
- ## `public function assertEqual($given, $expected, $comment)`
+ ### `public function assertEqual($given, $expected, $comment)`
 
  Asserts if two variables are equal
 
@@ -213,7 +213,7 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function assertNotEqual($given, $expected, $comment)`
+ ### `public function assertNotEqual($given, $expected, $comment)`
 
  Asserts if two variables are NOT equal
 
@@ -223,7 +223,7 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function assertIdentical($given, $expected, $comment)`
+ ### `public function assertIdentical($given, $expected, $comment)`
 
  Asserts if two variables are identical
 
@@ -233,14 +233,14 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function hash($non_primitive)`
+ ### `public function hash($non_primitive)`
 
  Creates hash of an object or array
 
   * **Parameters:** `mixed` — $non_primitive Non primitive to hash
   * **Returns:** string MD5
 
- ## `public function assertNotIdentical($given, $expected, $comment)`
+ ### `public function assertNotIdentical($given, $expected, $comment)`
 
  Asserts if two variables are NOT identical
 
@@ -250,7 +250,7 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function assertIsOfType($variable, $type, $comment)`
+ ### `public function assertIsOfType($variable, $type, $comment)`
 
  Asserts if variable is of expected type
 
@@ -260,7 +260,7 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function assertContainsString($haystack, $needle, $comment)`
+ ### `public function assertContainsString($haystack, $needle, $comment)`
 
  Asserts if one string contains the other
 
@@ -270,7 +270,7 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function assertContainsStringIgnoreCase($haystack, $needle, $comment)`
+ ### `public function assertContainsStringIgnoreCase($haystack, $needle, $comment)`
 
  Asserts if one string contains the other Here search is not case sensitive
 
@@ -280,20 +280,20 @@ Returns results as JSON string
     * `string` — $comment Assertion comment
   * **Returns:** \PhpCliTest\Result
 
- ## `public function isPrimitive($variable)`
+ ### `public function isPrimitive($variable)`
 
  Checks if variable is a primitive
 
   * **Parameters:** `mixed` — $variable Inspected variable
   * **Returns:** bool
 
- ## `public function result()`
+ ### `public function result()`
 
  Gets instance of result object
 
   * **Returns:** \PhpCliTest\Result
 
- ## `public function runner()`
+ ### `public function runner()`
 
  Gets reference to runner object
 
