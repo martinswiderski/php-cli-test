@@ -115,3 +115,81 @@ Comment
 Result
 
  * **Returns:** bool
+
+## `class Runner`
+
+Singleton, a test runner
+
+PHP version 5.5
+
+ * **Package:** PhpCliTest
+ * **Author:** Martin Swiderski <martin.swiderski@gmail.com>
+ * **License:** http://opensource.org/licenses/MIT MIT
+ * **Link:** https://codebloke.wordpress.com/mit-license/
+
+## `public $tests = array()`
+
+Collection of tests executed
+
+
+## `public $exit_code = 0`
+
+Command line exit code
+
+
+## `public $break_at_first_failed = false`
+
+If TRUE first failure would break the test
+
+
+## `private static $_self = null`
+
+Store for Singleton
+
+
+## `private function __construct()`
+
+Constructor
+
+ * **Returns:** \PhpCliTest\Runner
+
+## `public function breakAtFailed($flag=null)`
+
+Hybrid getter/setter if set to TRUE breaks at first assertion broken, otherwise it would evaluate all assertions and send non-0 exit code at the end in case of failure
+
+ * **Parameters:** `null|bool` — $flag If TRUE it would break on failure
+ * **Returns:** bool
+
+## `public function exitCode($code=null)`
+
+Hybrid setter/getter for exit code
+
+ * **Parameters:** `null|int` — $code Exit code, 0 or > 0
+ * **Returns:** int
+
+## `public function addTest(\PhpCliTest\Result $result)`
+
+Adds assertion result
+
+ * **Parameters:** `\PhpCliTest\Result` — $result Result object
+ * **Returns:** void
+
+## `public static function getInstance()`
+
+Singleton getter
+
+ * **Returns:** \PhpCliTest\Runner
+
+## `public function present()`
+
+Returns all registered tests and their results as string
+
+ * **Returns:** string
+
+## `public function toJson()`
+
+Returns results as JSON string
+
+ * **Returns:** string JSON
+
+ 
