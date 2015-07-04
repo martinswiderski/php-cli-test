@@ -192,4 +192,110 @@ Returns results as JSON string
 
  * **Returns:** string JSON
 
- 
+ ## `class TestCase`
+
+ A test case with assertions
+
+ PHP version 5.5
+
+  * **Package:** PhpCliTest
+  * **Author:** Martin Swiderski <martin.swiderski@gmail.com>
+  * **License:** http://opensource.org/licenses/MIT MIT
+  * **Link:** https://codebloke.wordpress.com/mit-license/
+
+ ## `public function assertEqual($given, $expected, $comment)`
+
+ Asserts if two variables are equal
+
+  * **Parameters:**
+    * `mixed` — $given Given value
+    * `mixed` — $expected Expected value
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function assertNotEqual($given, $expected, $comment)`
+
+ Asserts if two variables are NOT equal
+
+  * **Parameters:**
+    * `mixed` — $given Given value
+    * `mixed` — $expected Expected value
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function assertIdentical($given, $expected, $comment)`
+
+ Asserts if two variables are identical
+
+  * **Parameters:**
+    * `mixed` — $given Given value
+    * `mixed` — $expected Expected value
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function hash($non_primitive)`
+
+ Creates hash of an object or array
+
+  * **Parameters:** `mixed` — $non_primitive Non primitive to hash
+  * **Returns:** string MD5
+
+ ## `public function assertNotIdentical($given, $expected, $comment)`
+
+ Asserts if two variables are NOT identical
+
+  * **Parameters:**
+    * `mixed` — $given Given value
+    * `mixed` — $expected Expected value
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function assertIsOfType($variable, $type, $comment)`
+
+ Asserts if variable is of expected type
+
+  * **Parameters:**
+    * `mixed` — $variable Inspected variable
+    * `string` — $type Expected type
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function assertContainsString($haystack, $needle, $comment)`
+
+ Asserts if one string contains the other
+
+  * **Parameters:**
+    * `string` — $haystack String to search in
+    * `string` — $needle Searched string
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function assertContainsStringIgnoreCase($haystack, $needle, $comment)`
+
+ Asserts if one string contains the other Here search is not case sensitive
+
+  * **Parameters:**
+    * `string` — $haystack String to search in
+    * `string` — $needle Searched string
+    * `string` — $comment Assertion comment
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function isPrimitive($variable)`
+
+ Checks if variable is a primitive
+
+  * **Parameters:** `mixed` — $variable Inspected variable
+  * **Returns:** bool
+
+ ## `public function result()`
+
+ Gets instance of result object
+
+  * **Returns:** \PhpCliTest\Result
+
+ ## `public function runner()`
+
+ Gets reference to runner object
+
+  * **Returns:** \PhpCliTest\Runner
+  
